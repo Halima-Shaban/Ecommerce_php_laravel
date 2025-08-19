@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="container">
-    <h1 class="text-center text-light mt-5">Login Page</h1>
+<div class="container my-5" style="max-width: 520px;">
+    <h1 class="text-center text-dark mb-4">Login Page</h1>
 
     <form method="POST" action="{{ route('auth.login') }}" class="form">
         @csrf
@@ -20,9 +20,9 @@
 
         @endif
 
-        <div>
-            <label for="email">email</label>
-            <input name="email" type="email" class="feedback-input" placeholder="Email"  />
+        <div class="mb-3">
+            <label class="form-label" for="email">email</label>
+            <input name="email" type="email" class="form-control" placeholder="Email"  />
         @error('email')
         <div class="alert alert-danger  p-1">{{$message}}</div>
 
@@ -30,9 +30,9 @@
         </div>
 
 
-        <div>
-            <label for="password">password</label>
-            <input name="password" type="password" class="feedback-input" placeholder="password"  />
+        <div class="mb-3">
+            <label class="form-label" for="password">password</label>
+            <input name="password" type="password" class="form-control" placeholder="password"  />
               @error('password')
             <div class="alert alert-danger m-1 p-1">{{$message}}</div>
     
@@ -42,8 +42,11 @@
         
 
 
-        <input class="mt-1" type="submit" value="SUBMIT"/>
+    <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
+
+      <p class="mt-3 text-center">Don't have an account? <a href="register.html">Register</a></p>
+
 </div>
 
 @endsection

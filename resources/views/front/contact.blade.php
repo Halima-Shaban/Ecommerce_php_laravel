@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container">
-    <h1 class="text-center text-light mt-5">Contact Us</h1>
+<div class="container my-5">
+    <h1 class="mb-4">Contact Us</h1>
 
-    <form method="POST" action="{{ url('/send-message') }}" class="form">
+    <form method="POST" action="{{ url('/send-message') }}" class="form row g-3">
         @csrf
         
         @if($errors->any())
@@ -29,13 +29,35 @@
 
 
         @endif
-        <input name="name" type="text" class="feedback-input" placeholder="Name"  />   
 
-        <input name="email" type="email" class="feedback-input" placeholder="Email" required />
+        <div class="col-md-6">
+           <label class="form-label">Name</label>
 
-        <textarea name="message" class="feedback-input" placeholder="Your Message" required></textarea>
+           <input name="name" type="text" class="form-control" placeholder="Name"  />   
 
-        <input type="submit" value="SUBMIT"/>
+        </div>
+
+
+        <div class="col-md-6">
+      <label class="form-label">Email</label>
+
+      <input name="email" type="email" class="form-control" placeholder="Email" required />
+
+        </div>
+
+
+         <div class="col-12">
+      <label class="form-label">Message</label>
+      <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+
+         </div>
+
+         
+         
+         
+ <div class="col-12">
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </div>
     </form>
 </div>
 

@@ -4,8 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-body { background:rgb(30,30,40); }
-form { max-width:420px; margin:50px auto; }
+body { padding-top: 70px; }
+
+/* form { max-width:420px; margin:50px auto; }
 
 .nav-link:hover {
   color: #CC6666 !important;
@@ -57,7 +58,7 @@ textarea {
 
 .search-submit{
   padding: 0;
-}
+} */
 
 
 /* products */

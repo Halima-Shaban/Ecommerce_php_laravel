@@ -12,16 +12,16 @@
   <body>
 
  
-<nav class="navbar navbar-expand-lg bg-dark">
- <div class="container-fluid">
-    <a class="navbar-brand text-white" href="{{ url('/') }}"><img src="{{asset('assets')}}/ecommerce-logo-design_624194-148.avif" alt="" height="70px "></a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ <div class="container">
+    <a class="navbar-brand fw-bold" href="{{ url('/') }}">My Shop</a>
     <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto">
         
         <li class="nav-item">
           <a class="nav-link text-white {{!Request::segment(1)?'active':''}} " href="{{ url('/') }}">Home</a>
@@ -85,6 +85,14 @@
 
 
     @yield('content')
+
+
+<footer class="text-center mt-5 py-4 bg-dark text-white">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 MyShop. All rights reserved.</p>
+  </div>
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   </body>
 </html>
